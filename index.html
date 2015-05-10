@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <title>Document</title>
     
-    <!-- -->
-    
-    <script src="lib/nerdamer/nerdamer.core.js"></script> 
-    <script src="lib/nerdamer/Algebra.js"></script>
-    <script src="lib/nerdamer/Calculus.js"></script>
-    <script src="lib/mathneo/methods.js"></script>
-        
-    <!-- -->
-    <!-- -- 
-    <script src="mathneo.min.js"></script>
-    <!-- --> 
+    <script src="lib/Nerdamer.min.js"></script>
+    <script src="lib/MathNeo.js"></script>
     
 
 </head>
-<body>
+<body>  
+
     <h4>newton('x^4-4x^2+7x-11', 1.5, 0.00001)</h4>  
     <table id="table1" style="border: 1px solid black"></table>
     <br>
@@ -43,8 +35,6 @@
         var a = MathNeo.newton('x^5-x-3', 1.2, 0.0001);
         document.getElementById('table3').innerHTML = rowsTableData(b);
         
-        
-        
         function rowsTableData(data) {
             var rows = '';
             
@@ -66,6 +56,8 @@
             }            
             return rows;
         }
+        
+
         
     </script>
 </html>
