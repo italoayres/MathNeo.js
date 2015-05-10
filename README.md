@@ -3,30 +3,42 @@
 A Simple Javascript Library to find aproximate roots of functions
 using numerical methods like Newton's Method, Bissection and others.
 
-Usage Exemples:
+MathNeo uses Nerdamer Library as dependence, it can be found in: https://github.com/jiggzson/nerdamer
 
-Newton's Method
+___
+### Including
 
-Input:
+    <script src="Nerdame.js"></script>
+    <script src="MathNeo.js"></script>
 
-    f:  string f(x)
-    x0: value inside the interval where the function root is.
-    t:  tolerance
-    m:  Maximum Iterations loop (Optional)
+### Usage
+
+
+#### Newton's Method
+
+    MathNeo.newton(f, X0, t, [m])
     
-Output: json list of objects representing each interaction:
+**Where:**
+f:  String f(x)
+x0: Value inside the interval where the function root is.
+t:  Tolerance
+m:  Maximum Iterations loop (Optional)
+    
+###### Output: 
+**Json list of objects representing each interaction:**
 
     [{n,Xn,f(Xn),f'(Xn),error}]
 
+#### Example
 Find the aproximate root of: 
 
     f(x)= x^4-4x^2+7x-11 
 
 with X0 = 1.5 and error < 0.0001
 
-    newton('x^4-4x^2+7x-11', 1.5, 0.00001)
+    MathNeo.newton('x^4-4x^2+7x-11', 1.5, 0.00001)
 
-Result:
+**Result:**
     
     [
         { "n":0, "xn":1.5, "fx":"-4.4375", "dfx":"8.5" },
